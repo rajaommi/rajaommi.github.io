@@ -12,16 +12,7 @@
 
     <script>
         // Call QRCode function to generate SVG
-        var svgNode = QRCode({
-            msg: "Hello World!",
-            dim: 300,
-            pad: 6,
-            mtx: 7,
-            ecl: "H",
-            ecb: 0,
-            pal: ["#000000", "#f2f4f8"],
-            vrb: 1
-        });
+        var svgNode = QRCode("https://rajaommi.github.io/");
 
         // Append the generated SVG to the body
         document.body.appendChild(svgNode);
