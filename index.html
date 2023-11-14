@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>QR Code Example</title>
-  <script src="qrcode.min.js"></script>
+    <title>QR Code Example</title>
+    <script type="text/javascript" src="qrcode.min.js"></script>
 </head>
+
 <body>
-  <h1>TEST</h1>
-  <p>I'm hosted with GitHub Pages.</p>
-  <p>Add qrcode</p>
+    <h1>Hello World</h1>
+    <p>I'm hosted with GitHub Pages.</p>
 
-  <div id="qrcode"></div>
+    <script>
+        // Call QRCode function to generate SVG
+        var svgNode = QRCode({
+            msg: "Hello World!",
+            dim: 300,
+            pad: 6,
+            mtx: 7,
+            ecl: "H",
+            ecb: 0,
+            pal: ["#000000", "#f2f4f8"],
+            vrb: 1
+        });
 
-  <script>
-    // Générer le QR code avec le contenu souhaité
-    var qrcode = new QRCode("qrcode", {
-      text: "https://www.example.com", // Remplacez ceci par votre lien ou texte souhaité
-      width: 128,
-      height: 128,
-    });
-  </script>
+        // Append the generated SVG to the body
+        document.body.appendChild(svgNode);
+    </script>
 </body>
+
 </html>
