@@ -1,8 +1,22 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>QR Code Example</title>
+  <script src="qrcode.min.js"></script>
+</head>
 <body>
-<h1>TEST</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <h1>Hello World</h1>
+  <p>I'm hosted with GitHub Pages.</p>
 
+  <div id="qrcode"></div>
+
+  <script>
+    // Générer le QR code avec le contenu souhaité
+    var qrcode = new QRCode("qrcode", {
+      text: "https://www.example.com", // Remplacez ceci par votre lien ou texte souhaité
+      width: 128,
+      height: 128,
+    });
+  </script>
 </body>
 </html>
