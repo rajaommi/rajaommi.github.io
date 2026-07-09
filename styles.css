@@ -128,12 +128,22 @@ a:hover {
   display: grid;
   align-items: center;
   grid-template-columns: minmax(0, 0.98fr) minmax(360px, 0.62fr);
-  gap: 44px;
+  column-gap: 44px;
+  row-gap: 0;
   padding-top: 58px;
   padding-bottom: 64px;
 }
 
 .hero-copy {
+  grid-column: 1;
+  grid-row: 1;
+  max-width: 760px;
+  min-width: 0;
+}
+
+.hero-meta {
+  grid-column: 1;
+  grid-row: 2;
   max-width: 760px;
   min-width: 0;
 }
@@ -231,16 +241,17 @@ h3 {
 }
 
 .hero-visual {
+  grid-column: 2;
+  grid-row: 1 / span 2;
   display: grid;
-  grid-template-columns: 0.72fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-columns: minmax(118px, 0.58fr) minmax(0, 1fr);
   align-items: end;
   gap: 14px;
   min-width: 0;
 }
 
 .portrait,
-.phase-plot {
+.research-figure {
   width: 100%;
   border: 1px solid rgba(23, 25, 29, 0.12);
   box-shadow: var(--shadow);
@@ -248,19 +259,20 @@ h3 {
 }
 
 .portrait {
+  align-self: start;
   aspect-ratio: 4 / 5;
   border-radius: var(--radius);
 }
 
-.phase-plot {
-  grid-column: 1 / -1;
-  aspect-ratio: 16 / 10;
+.research-figure {
+  aspect-ratio: 4 / 5;
   border-radius: var(--radius);
+  object-position: center;
 }
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -550,24 +562,35 @@ h3 {
     font-size: 1.02rem;
   }
 
-  .hero-visual {
-    grid-template-columns: 1fr;
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
   }
 
-  .hero {
-    display: block;
+  .hero-actions {
+    margin-top: 0;
   }
 
   .hero-copy,
+  .hero-visual,
+  .hero-meta {
+    order: initial;
+  }
+
+  .hero-visual {
+    grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
+  }
+
+  .hero-copy,
+  .hero-visual,
+  .hero-meta,
   .lead,
   h1,
   .hero-actions {
-    width: calc(100vw - 72px);
+    width: 100%;
     max-width: 100%;
-  }
-
-  .portrait {
-    width: min(300px, 82vw);
   }
 
   .stats,
@@ -593,17 +616,9 @@ h3 {
 @media (max-width: 500px) {
   h1 {
     font-size: 2.45rem;
+    max-width: 19rem;
   }
 
-  .hero-copy,
-  .lead,
-  h1,
-  .hero-actions {
-    width: 100%;
-    max-width: 21rem;
-  }
-
-  .hero-visual,
   .stats,
   .section-heading,
   .research-grid,
