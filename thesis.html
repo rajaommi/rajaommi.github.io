@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f6f1">
+    <meta
+      name="description"
+      content="Natural Locomotion Families: Mirado Mortel's PhD research on exact reduced return, reconstructed transport, mechanical exchange and resonantly maintained motion."
+    >
+    <title>Natural Locomotion Families — Mirado Mortel's PhD Research</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="site.js" defer></script>
+    <script src="thesis-family-data.js" defer></script>
+    <script src="site-figures.js" defer></script>
+  </head>
+  <body class="thesis-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <div class="shell header-inner">
+        <a class="brand" href="index.html" aria-label="Return to Mirado Mortel's profile">Mirado Mortel</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open navigation"
+          data-nav-toggle
+        >
+          <span></span><span></span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Thesis navigation" data-nav>
+          <a href="#question">Question</a>
+          <a href="#qualification">Qualification</a>
+          <a href="#family">Families</a>
+          <a href="#contributions">Contributions</a>
+          <a href="#manuscript">Manuscript</a>
+          <a href="index.html">General profile</a>
+          <a
+            class="nav-download"
+            href="https://rajaommi.github.io/assets/mirado-mortel-thesis-latest.pdf"
+          >PDF ↓</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="top" class="shell thesis-hero">
+        <div class="thesis-hero-copy">
+          <p class="eyebrow">PhD research · Robotics · 2023–2026</p>
+          <h1>Natural Locomotion Families</h1>
+          <p class="thesis-subtitle">Let the mechanism organize the motion before controlling it.</p>
+          <p class="thesis-lead">
+            Rather than prescribing an arbitrary periodic joint choreography, this thesis asks
+            which repeatable motions are admitted by the locomotor's own dynamics. A natural-
+            locomotion cycle solves the declared unforced conservative equations, returns its
+            reduced mechanical state exactly, and leaves the reconstructed body pose free to move.
+          </p>
+          <p class="thesis-definition">
+            Here <em>natural</em> means dynamically compatible with the stated ideal model. It does
+            not mean stable, optimal, biologically inevitable or already validated on hardware.
+          </p>
+          <div class="actions">
+            <a
+              class="button button-primary"
+              href="https://rajaommi.github.io/assets/mirado-mortel-thesis-latest.pdf"
+            >Download the latest manuscript</a>
+            <a class="text-action" href="#question">Understand the argument</a>
+            <a class="text-action" href="index.html">General research profile</a>
+          </div>
+          <p class="thesis-version">Current V3 working manuscript · automatically compiled from the thesis source</p>
+        </div>
+
+        <figure class="scientific-figure figure-thesis" aria-labelledby="thesis-figure-title" aria-describedby="thesis-figure-description">
+          <canvas data-research-figure="thesis" aria-hidden="true">
+            Qualification of a natural-locomotion cycle: solve the mechanical field, return the reduced state, reconstruct a nonidentity pose increment, then organize qualified cycles into families.
+          </canvas>
+          <figcaption>
+            <strong id="thesis-figure-title">Solve, return, then read the locomotor output.</strong>
+            <span id="thesis-figure-description">Qualification comes before continuation or modal classification. Integrated exchange has a sharper but narrower role: under the scalar theorem's hypotheses, it replaces only the final unresolved return row.</span>
+          </figcaption>
+        </figure>
+
+        <dl class="thesis-facts">
+          <div><dt>Status</dt><dd>Complete working manuscript</dd></div>
+          <div><dt>Affiliation</dt><dd>ENSTA · Institut Polytechnique de Paris</dd></div>
+          <div><dt>PhD supervisor</dt><dd>Luc Jaulin</dd></div>
+          <div><dt>Co-supervisors</dt><dd>Lionel Lapierre · Simon Rohou</dd></div>
+        </dl>
+      </section>
+
+      <section id="question" class="section thesis-idea">
+        <div class="shell">
+          <div class="section-heading thesis-heading">
+            <p class="section-label">The question</p>
+            <div>
+              <h2>Four familiar ideas are each insufficient on their own.</h2>
+              <p>
+                The thesis combines nonlinear dynamics, relative periodicity, reconstruction
+                and forced response without asking any one of them to certify more than it can.
+              </p>
+            </div>
+          </div>
+
+          <div class="idea-grid idea-grid-four">
+            <article>
+              <span>01</span>
+              <div><h3>A linear mode is only a seed</h3><p>At finite amplitude, period, waveform and inter-coordinate phase all vary along the family.</p></div>
+            </article>
+            <article>
+              <span>02</span>
+              <div><h3>Full periodicity suppresses transport</h3><p>If body pose closes with the mechanical state, the cycle has no pose increment. Locomotion therefore requires reduced return with open pose.</p></div>
+            </article>
+            <article>
+              <span>03</span>
+              <div><h3>A transporting loop need not be natural</h3><p>Reconstruction tells where a prescribed loop goes; it does not prove that the timed loop solves the unforced dynamics.</p></div>
+            </article>
+            <article>
+              <span>04</span>
+              <div><h3>Loss changes the object</h3><p>A conservative cycle does not survive positive dissipation unchanged. A maintained response must return under forcing and replace its lost work.</p></div>
+            </article>
+          </div>
+
+          <blockquote class="thesis-question">
+            <p>The target is an exact reduced return admitted by the mechanism, with pose left open — not one preferred sinusoid.</p>
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="qualification" class="section principle-section">
+        <div class="shell">
+          <div class="section-heading thesis-heading">
+            <p class="section-label">Qualification</p>
+            <div>
+              <h2>A cycle qualifies before it is organized.</h2>
+              <p>
+                Continuation may connect solutions and modal metrics may classify them, but the
+                locomotor object itself must first pass three model-level checks.
+              </p>
+            </div>
+          </div>
+
+          <ol class="principle-list">
+            <li>
+              <span class="principle-index">01</span>
+              <div><h3>Mechanical compatibility</h3><p>The complete time-parameterized reduced trajectory solves the declared unforced conservative field.</p></div>
+              <p class="principle-word">Solve</p>
+            </li>
+            <li>
+              <span class="principle-index">02</span>
+              <div><h3>Nontrivial exact reduced return</h3><p>After a declared phase or minimal-period convention, the mechanical state returns: <span class="inline-math">z(T) = z(0)</span>.</p></div>
+              <p class="principle-word">Return</p>
+            </li>
+            <li>
+              <span class="principle-index">03</span>
+              <div><h3>Declared locomotor output</h3><p>Pose reconstruction gives the required nonidentity increment <span class="inline-math">Δg ≠ e<sub>G</sub></span>. This establishes transport, not by itself an oscillation-only cause of propulsion.</p></div>
+              <p class="principle-word">Move</p>
+            </li>
+          </ol>
+          <p class="qualification-note">
+            Qualified cycles can then be continued into branches and described by modal or
+            harmonic observables. The historical acronym NLM names the research programme;
+            the mathematical results are called <em>families</em> or <em>branches</em> because no
+            global invariant-manifold theorem is claimed.
+          </p>
+        </div>
+      </section>
+
+      <section id="family" class="section family-section">
+        <div class="shell">
+          <div class="section-heading thesis-heading">
+            <p class="section-label">Finite-amplitude family</p>
+            <div>
+              <h2>A family is not one sinusoid at different amplitudes.</h2>
+              <p>
+                The corrected two-segment archive contains 379 displayed cycles. Their clock,
+                carrier participation, phase relation and harmonic content change with mean speed.
+              </p>
+            </div>
+          </div>
+
+          <figure class="scientific-figure figure-family" aria-labelledby="family-figure-title" aria-describedby="family-figure-description">
+            <canvas data-research-figure="family" aria-hidden="true">
+              Audited two-segment family: period backbone and three representative normalized joint and heading waveforms at low, medium and high mean speed.
+            </canvas>
+            <figcaption>
+              <strong id="family-figure-title">The clock and choreography deform along the branch.</strong>
+              <span id="family-figure-description">Data from the archived 379-cycle 2SEG family. The representative yaw-rate harmonic distortion rises from 4.30% to 17.30%, while the unwrapped joint–heading phase relation shifts by about 85°. These are descriptive diagnostics, not a stability or global-manifold certificate.</span>
+            </figcaption>
+          </figure>
+
+          <div class="insight-grid">
+            <article><h3>What control should accompany</h3><p>A controller aligned with the mechanics must allow frequency and coordination to change along the branch instead of imposing one fixed harmonic choreography.</p></article>
+            <article><h3>What transport does — and does not — show</h3><p>A matched comparison on SE(2) shows that, away from near-zero drift, straight motion usually dominates the archived translation. The oscillation modulates that moving baseline; the comparison is not a causal energy decomposition.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section return-section">
+        <div class="shell">
+          <div class="section-heading thesis-heading">
+            <p class="section-label">Mechanical return</p>
+            <div>
+              <h2>Exchange certifies return only when the missing information is scalar.</h2>
+              <p>
+                The carrier-closed / carrier-open construction is a field decomposition after
+                carrier elimination, not a physical clamp. It exposes a transverse storage and
+                the exchange induced when the original coupled field is restored.
+              </p>
+            </div>
+          </div>
+
+          <figure class="scientific-figure figure-return" aria-labelledby="return-figure-title" aria-describedby="return-figure-description">
+            <canvas data-research-figure="return-boundary" aria-hidden="true">
+              Scalar versus vector return: one storage value identifies a unique endpoint on an injective scalar section, but leaves a continuum on a multi-dimensional section.
+            </canvas>
+            <figcaption>
+              <strong id="return-figure-title">The dimension of the unresolved return decides what one balance can prove.</strong>
+              <span id="return-figure-description">In 2SEG, after every other return row closes and on the declared oriented injective section, zero integrated exchange is equivalent to the final crossing-speed return. In 3SEG, a storage level contains many possible endpoints, so full vector return remains necessary and exchange is only a balance diagnostic.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="contributions" class="section results-section">
+        <div class="shell">
+          <div class="section-heading thesis-heading">
+            <p class="section-label">Contributions and evidence</p>
+            <div>
+              <h2>Each result is stated at the level its evidence supports.</h2>
+              <p>The theorem, numerical constructions, audits and control demonstration are deliberately kept distinct.</p>
+            </div>
+          </div>
+
+          <div class="result-ladder">
+            <article>
+              <div class="result-meta"><span>2SEG</span><p>Numerical family</p></div>
+              <div><h3>Finite-amplitude relative-periodic locomotion</h3><p>A spectral seed is corrected and continued into a 379-cycle moving family whose period and choreography vary. A matched-straight SE(2) audit then separates total transport from modulation relative to straight drift.</p></div>
+            </article>
+            <article>
+              <div class="result-meta"><span>Theorem</span><p>Exact, conditional</p></div>
+              <div><h3>Scalar exchange–return equivalence</h3><p>On an oriented finite-speed scalar section with injective storage, and once the other return rows close, zero integrated exchange is equivalent to return of the remaining crossing speed. The theorem is realized on 29 accepted cycles.</p></div>
+            </article>
+            <article>
+              <div class="result-meta"><span>3SEG</span><p>Population construction</p></div>
+              <div><h3>Coexisting returned in-phase and anti-phase sectors</h3><p>At one fixed parameter vector, 2,278 AP and 1,358 IP opened cycle files pass the audited return, transport and modal-classification rows. Full vector return qualifies each cycle; modal metrics classify it afterwards.</p></div>
+            </article>
+            <article>
+              <div class="result-meta"><span>Gate B</span><p>Local numerical bridge</p></div>
+              <div><h3>One conservative cycle continued into maintained motion</h3><p>Keeping geometry, inertia, constraint and elasticity fixed, one 2SEG cycle is followed through 19 damping-and-forcing homotopy points. This is one synchronized fixed-speed branch, not persistence or stability of the whole family.</p></div>
+            </article>
+            <article>
+              <div class="result-meta"><span>RLM + PLL</span><p>Separate forced model</p></div>
+              <div><h3>A response map and local phase–speed navigation</h3><p>A parameter-distinct archive contains 13,782 period-matched responses with folds and changing waveforms. Work–loss balance is exact; quadrature is a local marker only on the lower-amplitude segment. A fast phase loop and slower mean-speed update traverse that chart locally from two named starts.</p></div>
+            </article>
+          </div>
+
+          <figure class="scientific-figure figure-evidence" aria-labelledby="evidence-figure-title" aria-describedby="evidence-figure-description">
+            <canvas data-research-figure="evidence" aria-hidden="true">
+              Evidence topology separating conservative families, the scalar theorem, one local same-model bridge, a parameter-distinct forced-response map and local navigation, with missing stability and hardware links.
+            </canvas>
+            <figcaption>
+              <strong id="evidence-figure-title">Established links are solid; research-programme links are dashed.</strong>
+              <span id="evidence-figure-description">The same-mechanics bridge connects one conservative cycle to one maintained branch. It does not identify that branch with the parameter-distinct RLM archive. Whole-family persistence, orbital stability, recovery and identified-hardware validation remain open.</span>
+            </figcaption>
+          </figure>
+
+          <details class="scope-details">
+            <summary>Scientific scope and current limits</summary>
+            <div>
+              <p>The mechanical results concern smooth ideal nonholonomic models with fixed nondimensional parameters. Conservative orbital stability, basins, robustness and hardware identity are not established.</p>
+              <p>The 3SEG population audit covers the stated return, modal, exchange and pose rows, not a complete genealogy or exhaustive atlas. The same-model bridge contains one anchored branch. The forced-response and controller archives belong to a different parameter set and have no experimental validation.</p>
+              <p>All 42 archived controller stages were accepted, so rejection, rollback and recovery remain untested. The demonstrated claim is local navigation of a forced-response chart, not stabilization of conservative natural-locomotion families.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section id="manuscript" class="section manuscript-section">
+        <div class="shell manuscript-grid">
+          <div class="manuscript-copy">
+            <p class="section-label">Manuscript</p>
+            <h2>Read the current working manuscript.</h2>
+            <p>
+              The concise V3 is designed as a self-contained three-day reading path: the
+              necessary foundations are introduced where they become useful, and every main
+              contribution is paired with its evidence boundary.
+            </p>
+            <a
+              class="button button-primary"
+              href="https://rajaommi.github.io/assets/mirado-mortel-thesis-latest.pdf"
+            >Download the latest manuscript</a>
+            <p class="small-note">Stable URL · refreshed automatically after each successful build of the V3 source branch · not yet the final institutional deposit.</p>
+          </div>
+
+          <div class="contents-list">
+            <article><span>01</span><div><h3>Question and foundations</h3><p>Action and phase, nonlinear modes, relative periodicity, reconstruction, return maps and losses.</p></div></article>
+            <article><span>02</span><div><h3>Conservative families and return</h3><p>The 2SEG family, scalar exchange theorem, 3SEG vector boundary and matched-pose audits.</p></div></article>
+            <article><span>03</span><div><h3>Maintained response and navigation</h3><p>The same-mechanics local bridge, parameter-distinct Resonant Locomotion Map and local phase–speed controller.</p></div></article>
+            <article><span>04</span><div><h3>Synthesis, limits and protocols</h3><p>A direct answer, evidence topology, research programme and technical appendices for reproduction.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section thesis-publications-section">
+        <div class="shell">
+          <div class="section-heading compact-heading thesis-heading">
+            <p class="section-label">Related publications</p>
+            <div><h2>Research supporting the manuscript</h2></div>
+          </div>
+          <div class="publication-list thesis-publications">
+            <article><p class="publication-meta">2026 · Preprint</p><div><h3>Natural Locomotion: Principle and Method</h3></div><a href="https://arxiv.org/abs/2605.28254" target="_blank" rel="noreferrer">arXiv ↗</a></article>
+            <article><p class="publication-meta">2025 · Mechatronics</p><div><h3>Natural efficient gaits from Nonholonomic Locomotion Nonlinear Normal Mode (NL-NNM): The Pendrivencar case</h3></div><a href="https://doi.org/10.1016/j.mechatronics.2025.103366" target="_blank" rel="noreferrer">DOI ↗</a></article>
+            <article><p class="publication-meta">2025 · IEEE OCEANS</p><div><h3>Energy-Efficient Nonholonomic Fish Robot: Nonlinear Forced Oscillations</h3></div><a href="https://doi.org/10.1109/OCEANS58557.2025.11104676" target="_blank" rel="noreferrer">DOI ↗</a></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section thesis-contact">
+        <div class="shell contact-inner">
+          <div><p class="section-label">Contact</p><h2>Discuss nonlinear dynamics, locomotion or mechanics-aware control.</h2></div>
+          <div class="contact-links">
+            <a href="mailto:mirado.rajaomarosata@ensta.fr">mirado.rajaomarosata@ensta.fr</a>
+            <a href="index.html">Return to the general profile →</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner"><p>© 2026 Mirado Mortel</p><p>Natural Locomotion Families · PhD research</p></div>
+    </footer>
+  </body>
+</html>

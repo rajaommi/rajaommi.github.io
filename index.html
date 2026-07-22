@@ -3,355 +3,390 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f1ea">
     <meta
       name="description"
-      content="Mirado Mortel, robotics PhD candidate at ENSTA / Institut Polytechnique de Paris. Research in natural locomotion, nonlinear dynamics, nonholonomic mechanics, simulation, control and experimental robotics."
+      content="Mirado Mortel is a robotics researcher and engineer working across locomotion, nonlinear dynamics, intrinsic navigation and minimal sensing."
     >
-    <title>Mirado Mortel | Robotics and Natural Locomotion</title>
+    <title>Mirado Mortel — Robotics Researcher &amp; Engineer</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="site.js" defer></script>
+    <script src="site-figures.js" defer></script>
   </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Mirado Mortel home">
-        <span class="brand-mark">MM</span>
-        <span>Mirado Mortel</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
-        <a href="#cv">CV</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <body class="profile-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <div class="shell header-inner">
+        <a class="brand" href="#top" aria-label="Mirado Mortel, home">Mirado Mortel</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open navigation"
+          data-nav-toggle
+        >
+          <span></span><span></span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation" data-nav>
+          <a href="#research">Research</a>
+          <a href="#method">Method</a>
+          <a href="#engineering">Engineering</a>
+          <a href="#publications">Publications</a>
+          <a href="thesis.html">Thesis</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </header>
 
-    <main id="top">
-      <section class="hero section-band">
+    <main id="main">
+      <section id="top" class="shell profile-hero">
         <div class="hero-copy">
-          <p class="eyebrow">Robotics PhD candidate - ENSTA / Institut Polytechnique de Paris</p>
-          <h1>Natural locomotion and nonlinear robot dynamics.</h1>
-          <p class="lead">
-            I study how mechanical systems can select efficient gait families before control,
-            optimization or learning. My work connects nonholonomic mechanics, nonlinear modes,
-            hybrid-contact locomotion, simulation, control and real robot validation.
+          <p class="eyebrow">Mirado Mortel · Robotics researcher &amp; engineer</p>
+          <h1>Structure-aware robotics, from motion to navigation.</h1>
+          <p class="hero-summary">
+            I study how a robot's mechanics, the geometry of its environment and the
+            information carried by sparse sensor signals can be used directly for locomotion
+            and navigation.
           </p>
-        </div>
-        <div class="hero-visual" aria-label="Profile and research visual">
-          <img class="portrait" src="assets/profile.jpg" alt="Portrait of Mirado Mortel">
-          <img
-            class="research-figure"
-            src="assets/pendrivencar-overview.jpg"
-            alt="Pendrivencar model and natural locomotion schematic"
-          >
-        </div>
-        <div class="hero-meta">
-          <div class="hero-actions" aria-label="Profile links">
-            <a class="button primary" href="mailto:mirado.rajaomarosata@ensta.fr">Email</a>
-            <a class="button" href="assets/01_original_main_complete_thesis_v0.pdf" download>Thesis PDF</a>
-            <a class="button" href="https://scholar.google.com/citations?hl=fr&amp;user=OaedG6MAAAAJ">Google Scholar</a>
-            <a class="button" href="https://github.com/rajaommi">GitHub</a>
+          <p class="hero-detail">
+            My work connects nonlinear dynamics, nonholonomic mechanics, reduced-order
+            modeling, estimation and control — from mathematical analysis to reproducible
+            simulation and physical robotic systems.
+          </p>
+          <div class="actions">
+            <a class="button button-primary" href="#research">Explore the research</a>
+            <a class="text-action" href="#engineering">View engineering work</a>
+            <a class="text-action" href="#contact">Contact</a>
           </div>
-          <p class="note">
-            Open to postdoctoral or visiting researcher opportunities from September/October 2026.
-          </p>
-        </div>
-      </section>
-
-      <section class="stats section-wrap" aria-label="Profile highlights">
-        <article class="stat-card">
-          <span>2023-present</span>
-          <strong>PhD in Robotics</strong>
-          <p>Natural Locomotion Manifolds at ENSTA / Lab-STICC.</p>
-        </article>
-        <article class="stat-card">
-          <span>Ranked 1st</span>
-          <strong>MSc Robotics</strong>
-          <p>ENSTA, Institut Polytechnique de Paris, robotics track.</p>
-        </article>
-        <article class="stat-card">
-          <span>2023-present</span>
-          <strong>Lecturer / instructor</strong>
-          <p>Agrégation-qualified, with Computer Vision, 3D Vision and C++ teaching.</p>
-        </article>
-        <article class="stat-card">
-          <span>2025</span>
-          <strong>JJCR Best Poster</strong>
-          <p>Third prize at the French Young Robotics Researchers meeting.</p>
-        </article>
-      </section>
-
-      <section id="research" class="section-band">
-        <div class="section-heading">
-          <p class="eyebrow">Research</p>
-          <h2>Mechanics first, control second.</h2>
-          <p>
-            My doctoral work formulates natural locomotion through internal recurrence,
-            pose drift and cyclic exchange balance between an internal oscillator and the
-            environment-mediated propulsive channel.
+          <p class="availability">
+            Available for postdoctoral and robotics R&amp;D positions from September 2026; an October start is also possible.
           </p>
         </div>
 
-        <div class="research-grid">
-          <article class="research-item">
-            <h3>Natural Locomotion Manifolds</h3>
-            <p>
-              Closed/open construction for identifying gait families in conservative
-              nonholonomic systems, with certification through recurrence, exchange balance,
-              modal identity and nonzero displacement.
-            </p>
-          </article>
-          <article class="research-item">
-            <h3>Nonlinear modes and resonance</h3>
-            <p>
-              Nonlinear normal modes, periodic orbit continuation, frequency-response
-              analysis and phase criteria for energy-efficient locomotion under losses.
-            </p>
-          </article>
-          <article class="research-item">
-            <h3>Hybrid and compliant locomotion</h3>
-            <p>
-              Extension of the same principle toward walkers and legged systems with
-              intermittent contact, impact/reset maps, elastic storage and controlled
-              compensation.
-            </p>
-          </article>
-          <article class="research-item">
-            <h3>Simulation to robot</h3>
-            <p>
-              Numerical simulation, model calibration, ROS/C++/Python workflows, sensors,
-              actuators and hardware validation across mobile, marine and legged platforms.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="publications" class="section-wrap">
-        <div class="section-heading compact">
-          <p class="eyebrow">Publications</p>
-          <h2>Selected work</h2>
-          <p>
-            Earlier publications may appear under my former name, Mirado Rajaomarosata.
-          </p>
-        </div>
-
-        <div class="publication-list">
-          <article class="publication-card">
-            <div>
-              <span class="pub-year">2026</span>
-              <h3>Natural Locomotion: Principle and Method</h3>
-              <p>Mirado Mortel, Luc Jaulin, Lionel Lapierre, Simon Rohou. Preprint.</p>
-            </div>
-            <a href="https://arxiv.org/abs/2605.28254">arXiv:2605.28254</a>
-          </article>
-          <article class="publication-card">
-            <div>
-              <span class="pub-year">2025</span>
-              <h3>Natural efficient gaits from Nonholonomic Locomotion Nonlinear Normal Mode: The Pendrivencar case</h3>
-              <p>Mirado Rajaomarosata, Luc Jaulin, Lionel Lapierre, Simon Rohou. Mechatronics, 110, 103366.</p>
-            </div>
-            <a href="https://doi.org/10.1016/j.mechatronics.2025.103366">DOI</a>
-          </article>
-          <article class="publication-card">
-            <div>
-              <span class="pub-year">2025</span>
-              <h3>Energy-Efficient Nonholonomic Fish Robot: Nonlinear Forced Oscillations</h3>
-              <p>Mirado Rajaomarosata, Luc Jaulin, Lionel Lapierre, Simon Rohou. IEEE OCEANS 2025 Brest.</p>
-            </div>
-            <a href="https://doi.org/10.1109/OCEANS58557.2025.11104676">DOI</a>
-          </article>
-        </div>
-      </section>
-
-      <section id="projects" class="section-band">
-        <div class="section-heading">
-          <p class="eyebrow">Projects</p>
-          <h2>Robots, models and validation loops.</h2>
-          <p>
-            A selection of systems where modeling, simulation, sensors, control software and
-            hardware constraints meet.
-          </p>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card">
-            <img src="assets/equileap.jpg" alt="EquiLeap wheeled biped CAD and prototype">
-            <div>
-              <h3>EquiLeap - 1.2 m wheeled biped</h3>
-              <p>
-                Full mechatronic build with four-bar synthesis, Lagrangian modeling,
-                balance-control-oriented prototyping, IMU/Hall sensing and real-time loops.
-              </p>
-              <a href="https://github.com/rajaommi/EquiLeap">Repository</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <img src="assets/edf-slam.jpg" alt="Hydraulic-pipeline inspection robot and RTAB-Map reconstruction">
-            <div>
-              <h3>EDF inspection robot - ROS / RTAB-Map</h3>
-              <p>
-                Mobile inspection platform for hydraulic pipes with RealSense sensing,
-                graph-based visual SLAM, C++/Python, ROS/Linux and curvature diagnostics.
-              </p>
-            </div>
-          </article>
-          <article class="project-card">
-            <img src="assets/shiva-exo.jpg" alt="Shiva Exo arm modeling diagram">
-            <div>
-              <h3>Shiva Exo V2 - assistive exoskeleton</h3>
-              <p>
-                Mechanical analysis, buckling-spring force characterization, test bench,
-                Simscape Multibody model and variable-assistance concept.
-              </p>
-            </div>
-          </article>
-          <article class="project-card">
-            <img src="assets/currloop.jpg" alt="currLoop current and torque loop hardware simulation">
-            <div>
-              <h3>currLoop - current/torque simulation</h3>
-              <p>
-                ESP32, H-bridge logic, current sensing, encoder feedback and motor physics
-                toward sinusoidal PI current control and resonance-oriented actuation.
-              </p>
-            </div>
-          </article>
-          <article class="project-card">
-            <img src="assets/cinclus.jpg" alt="Cinclus aerial-underwater drone prototype">
-            <div>
-              <h3>Cinclus-23 - aerial-underwater drone</h3>
-              <p>
-                Project and mechatronic-design lead for a carbon/epoxy fixed wing with
-                Pixhawk/RPi/MAVLink architecture and validated flight/swim transitions.
-              </p>
-            </div>
-          </article>
-          <article class="project-card">
-            <img src="assets/three-seg-trajectory.jpg" alt="Three-segment Natural Locomotion trajectory comparison">
-            <div>
-              <h3>Natural Locomotion diagnostics</h3>
-              <p>
-                Continuation, modal certification, pair-plot diagnostics and trajectory
-                reconstruction for two- and three-segment nonholonomic gait families.
-              </p>
-              <a href="https://arxiv.org/abs/2605.28254">Preprint</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="cv" class="section-wrap two-column">
-        <div class="section-heading compact">
-          <p class="eyebrow">CV</p>
-          <h2>Education and experience</h2>
-        </div>
-
-        <div class="timeline">
-          <article>
-            <span>2023-present</span>
-            <h3>PhD in Robotics, expected 2026</h3>
-            <p>
-              ENSTA / Institut Polytechnique de Paris - Natural Locomotion Manifolds,
-              nonlinear dynamics, nonholonomic mechanics and mechanics-aware control.
-            </p>
-          </article>
-          <article>
-            <span>2023-present</span>
-            <h3>Probationary lecturer and lead instructor</h3>
-            <p>
-              Agrégation-qualified; lectures, tutorials, practical sessions and supervision
-              in Computer Vision, 3D Vision and C++ for engineering students.
-            </p>
-          </article>
-          <article>
-            <span>2025-present</span>
-            <h3>Soft-continuum and hybrid-contact extensions</h3>
-            <p>
-              CKte Beam and walker-oriented studies connecting Cosserat/Kirchhoff modeling,
-              impact/reset maps, stride diagnostics and phase/resonance-based control.
-            </p>
-          </article>
-          <article>
-            <span>2023</span>
-            <h3>EquiLeap - wheeled biped</h3>
-            <p>
-              Full mechatronic design and build of a 1.2 m platform with Lagrangian modeling,
-              balance-control prototyping, sensing and real-time loops.
-            </p>
-          </article>
-          <article>
-            <span>2022</span>
-            <h3>EDF inspection robot - visual SLAM</h3>
-            <p>
-              Four-month internship on hydraulic-pipeline inspection with RealSense sensing,
-              RTAB-Map graph SLAM, C++/Python and ROS/Linux.
-            </p>
-          </article>
-          <article>
-            <span>2021-2022</span>
-            <h3>Cinclus-23 - aerial-underwater drone</h3>
-            <p>
-              Project and mechatronic-design lead for a composite fixed wing with
-              Pixhawk/RPi/MAVLink architecture and validated air-water transitions.
-            </p>
-          </article>
-          <article>
-            <span>2019</span>
-            <h3>ELSYS Design - embedded vision / FPGA</h3>
-            <p>
-              Six-month internship on maritime anti-collision prototyping with Zynq,
-              camera/IMU interfacing, Linux/OpenCV and embedded electronics.
-            </p>
-          </article>
-          <article>
-            <span>2021-2023</span>
-            <h3>MSc in Robotics, ranked 1st</h3>
-            <p>Guidance, navigation, localization, control, mobile robotics and experimentation.</p>
-          </article>
-          <article>
-            <span>2017-2023</span>
-            <h3>ENS Rennes - Mechatronics</h3>
-            <p>Mechanics, electronics, electrical engineering, automatic control and industrial computing.</p>
-          </article>
-          <article>
-            <span>2023</span>
-            <h3>MSc Dynamical Systems and Signals</h3>
-            <p>University of Angers / Polytech Angers.</p>
-          </article>
-        </div>
-
-        <aside class="cv-panel">
-          <h3>Technical profile</h3>
-          <ul>
-            <li>Natural locomotion, nonlinear dynamics, nonholonomic mechanics and passive/conservative systems</li>
-            <li>Gait generation, continuation, Floquet/stride diagnostics, resonance and PLL-style control</li>
-            <li>Python, C++, ROS1/ROS2, Linux, Git, Gazebo, Simscape and numerical simulation</li>
-            <li>3D vision, camera calibration, RTAB-Map/graph SLAM, Kalman/EKF and particle filtering</li>
-            <li>Mechanical design, CAD, sensors, actuators, embedded electronics and experimental robotics</li>
-          </ul>
-          <h3>Awards</h3>
-          <ul>
-            <li>3rd prize - Best Poster, JJCR French Young Robotics Researchers, 2025</li>
-            <li>3rd prize - Distributed Intelligence Challenge, CIEDS and French Defense Innovation Agency, 2023</li>
-          </ul>
-          <h3>Languages</h3>
-          <p>French native. English TOEIC 850 / B2.</p>
+        <aside class="hero-aside" aria-label="Research profile">
+          <figure class="portrait">
+            <img src="assets/profile.jpg" alt="Portrait of Mirado Mortel">
+            <figcaption>PhD candidate · ENSTA / Institut Polytechnique de Paris · Lab-STICC</figcaption>
+          </figure>
+          <div class="research-key" aria-label="Main research directions">
+            <p><span class="key-mark mechanics-mark"></span>Mechanics &amp; locomotion</p>
+            <p><span class="key-mark navigation-mark"></span>Intrinsic navigation</p>
+            <p><span class="key-mark sensing-mark"></span>Minimal sensing</p>
+          </div>
         </aside>
       </section>
 
-      <section id="contact" class="contact section-band">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Research discussions, postdoc opportunities and collaborations.</h2>
+      <section id="research" class="section research-section">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-label">Research program</p>
+            <div>
+              <h2>Locomotion, navigation and sensing share a structural question.</h2>
+              <p>
+                What useful behavior is already organized by the physics of the robot, the
+                topology of the environment or the structure of a measured field — and how can
+                a model expose it without erasing it?
+              </p>
+            </div>
+          </div>
+
+          <div class="research-map">
+            <article class="research-axis axis-mechanics">
+              <div class="axis-header">
+                <div>
+                  <p class="axis-number">01 · Mechanics</p>
+                  <h3>Dynamics and control of locomotion</h3>
+                </div>
+              </div>
+              <p class="axis-intro">
+                I study relative-periodic, resonant and hybrid motions in nonholonomic robots:
+                how exact reduced return coexists with open pose, how finite-amplitude families
+                deform, and how selected forced responses can be maintained and navigated locally.
+              </p>
+              <figure class="scientific-figure figure-mechanics" aria-labelledby="mechanics-figure-title" aria-describedby="mechanics-figure-description">
+                <canvas
+                  data-research-figure="mechanics"
+                  aria-hidden="true"
+                >Three locomotion mechanisms: a relative-periodic articulated robot, a flexible skate-constrained beam and a collisionless walker.</canvas>
+                <figcaption>
+                  <strong id="mechanics-figure-title">Three mechanical regimes</strong>
+                  <span id="mechanics-figure-description">Schematic. Relative-periodic articulated locomotion, a flexible skate-constrained beam and collisionless walking share a structure-aware modeling question — not a single proof or control law.</span>
+                </figcaption>
+              </figure>
+              <div class="project-notes">
+                <div>
+                  <p class="project-status">PhD research · preprint &amp; peer-reviewed precursor</p>
+                  <h4>Natural locomotion families</h4>
+                  <p>Exact reduced return, open reconstructed pose and mechanics-based return certificates under explicit hypotheses.</p>
+                  <a href="thesis.html">Dedicated thesis page</a>
+                </div>
+                <div>
+                  <p class="project-status">Published foundation · active control study</p>
+                  <h4>Resonant locomotion &amp; phase locking</h4>
+                  <p>A parameter-distinct forced-response map, exact cycle work balance and local phase–speed navigation; quadrature is used only as a local marker.</p>
+                  <a href="https://doi.org/10.1109/OCEANS58557.2025.11104676" target="_blank" rel="noreferrer">OCEANS paper ↗</a>
+                </div>
+                <div>
+                  <p class="project-status">Validated reproduction · active extension</p>
+                  <h4>Collisionless walking</h4>
+                  <p>High-accuracy reproduction of a conservative three-link collisionless gait, alongside an active NLM extension on a separate scalar internal-oscillator walker.</p>
+                </div>
+                <div>
+                  <p class="project-status">Advanced numerical study</p>
+                  <h4>CKte Beam</h4>
+                  <p>A reduced Kirchhoff–Cosserat beam with a nonholonomic skate constraint, simulated faster than real time with single-rotor go-to-goal and waypoint motion.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="research-axis axis-navigation">
+              <div class="axis-header">
+                <div>
+                  <p class="axis-number">02 · Navigation</p>
+                  <h3>Intrinsic representations of the environment</h3>
+                </div>
+              </div>
+              <p class="axis-intro">
+                I develop navigation prototypes that use the geometry and topology of an
+                environment directly, together with estimation from sparse measurements.
+              </p>
+              <figure class="scientific-figure figure-navigation" aria-labelledby="navigation-figure-title" aria-describedby="navigation-figure-description">
+                <canvas
+                  data-research-figure="navigation"
+                  aria-hidden="true"
+                >A cave-like geometry converted into intrinsic cells, sparse connectivity and a scalar coordinate.</canvas>
+                <figcaption>
+                  <strong id="navigation-figure-title">From geometry to intrinsic coordinates</strong>
+                  <span id="navigation-figure-description">Schematic. Metric geometry is converted into local foliation cells and Reeb-like connectivity; scalar estimation is studied separately on a circular one-dimensional prototype.</span>
+                </figcaption>
+              </figure>
+              <div class="project-notes">
+                <div>
+                  <p class="project-status">Research prototypes · synthetic &amp; simulated evaluation</p>
+                  <h4>Foliation-based navigation &amp; scalar SLAM</h4>
+                  <p>A 2D foliation prototype builds intrinsic cells and Reeb-like connectivity; a separate circular SLAM study estimates pose and a sparse signed map from noisy odometry and one scalar intensity measurement.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="research-axis axis-sensing">
+              <div class="axis-header">
+                <div>
+                  <p class="axis-number">03 · Sensing</p>
+                  <h3>Minimal perception through structured fields</h3>
+                </div>
+              </div>
+              <p class="axis-intro">
+                I study what a compact sensor can infer when the physics of its measurement
+                field is modeled explicitly.
+              </p>
+              <figure class="scientific-figure figure-sensing" aria-labelledby="sensing-figure-title" aria-describedby="sensing-figure-description">
+                <canvas
+                  data-research-figure="sensing"
+                  aria-hidden="true"
+                >A three-electrode electric sensor in water, a conductivity-contrast object and a precomputed linearized forward model.</canvas>
+                <figcaption>
+                  <strong id="sensing-figure-title">A compact sensor with a precomputed forward model</strong>
+                  <span id="sensing-figure-description">Schematic. In a two-dimensional electro-quasi-static conductive model, incident and adjoint fields provide a precomputed sensitivity relation for fast, linearized predictions.</span>
+                </figcaption>
+              </figure>
+              <div class="project-notes">
+                <div>
+                  <p class="project-status">Modeling study · fast-simulation prototype</p>
+                  <h4>Artificial electric sensing in water</h4>
+                  <p>A two-dimensional electro-quasi-static model and adjoint-derived sensitivity matrix for rapid evaluation of a compact three-electrode sensor.</p>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
-        <div class="contact-links">
-          <a class="button primary" href="mailto:mirado.rajaomarosata@ensta.fr">mirado.rajaomarosata@ensta.fr</a>
-          <a class="button" href="https://www.linkedin.com/in/mirado-rajaomarosata-5193a1213/">LinkedIn</a>
-          <a class="button" href="https://github.com/rajaommi">GitHub</a>
+      </section>
+
+      <section class="section thesis-spotlight" aria-labelledby="thesis-spotlight-title">
+        <div class="shell thesis-spotlight-inner">
+          <div>
+            <p class="section-label">Doctoral research · 2023–2026</p>
+            <h2 id="thesis-spotlight-title">Natural Locomotion Families</h2>
+          </div>
+          <div>
+            <p>
+              My PhD asks which repeatable locomotor motions are admitted by a mechanism before
+              a complete joint choreography is prescribed. It connects conservative relative-
+              periodic families, a conditional scalar exchange theorem, maintained forced
+              responses and local chart navigation while keeping their evidence levels distinct.
+            </p>
+            <div class="actions">
+              <a class="button button-primary" href="thesis.html">Explore the thesis</a>
+              <a
+                class="text-action"
+                href="https://rajaommi.github.io/assets/mirado-mortel-thesis-latest.pdf"
+              >Download the latest manuscript ↓</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="method" class="section method-section">
+        <div class="shell">
+          <div class="section-heading compact-heading">
+            <p class="section-label">Research method</p>
+            <div>
+              <h2>Start with the structure. Keep it visible through the pipeline.</h2>
+              <p>
+                I use the same working logic across mechanics, navigation and sensing, while
+                adapting the mathematical tools and the level of validation to each problem.
+              </p>
+            </div>
+          </div>
+          <ol class="method-line">
+            <li><span>01</span><p>Physical, geometric or sensory structure</p></li>
+            <li><span>02</span><p>Interpretable reduced model</p></li>
+            <li><span>03</span><p>Return, continuation &amp; evidence audit</p></li>
+            <li><span>04</span><p>Control or inference</p></li>
+            <li><span>05</span><p>Reproducible simulation &amp; robotic systems</p></li>
+          </ol>
+          <p class="method-note">
+            Current hardware direction: embedded design and current-loop simulation toward
+            physical tracking of maintained responses. The thesis evidence itself remains numerical.
+          </p>
+        </div>
+      </section>
+
+      <section id="engineering" class="section engineering-section">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-label">Engineering</p>
+            <div>
+              <h2>From models to integrated robotic systems.</h2>
+              <p>
+                Design, instrumentation and testing across biped locomotion, field inspection,
+                assistive robotics and an aerial–underwater vehicle.
+              </p>
+            </div>
+          </div>
+
+          <div class="engineering-mosaic">
+            <article class="engineering-project engineering-project-lead">
+              <figure><img src="assets/equileap.jpg" alt="EquiLeap wheeled biped CAD and physical prototype" loading="lazy"></figure>
+              <div>
+                <p class="project-status">Built and tested · 2023</p>
+                <h3>EquiLeap</h3>
+                <p>I designed the four-bar architecture and Lagrangian model of this 1.2 m wheeled biped, then integrated its structure, actuation, IMU and Hall sensing, and real-time control.</p>
+                <a href="https://webperso.ensta.fr/jaulin/rapport_pfe_mirado.pdf" target="_blank" rel="noreferrer">Project report ↗</a>
+              </div>
+            </article>
+
+            <article class="engineering-project engineering-project-interface engineering-project-edf">
+              <figure><img src="assets/edf-slam.jpg" alt="Hydraulic-pipe inspection system and RTAB-Map reconstruction" loading="lazy"></figure>
+              <div>
+                <p class="project-status">Industrial R&amp;D · EDF · 2022</p>
+                <h3>Hydraulic-pipe inspection</h3>
+                <p>Visual SLAM with RealSense, IMU, ROS and RTAB-Map, followed by 3D reconstruction and curvature-based pipe classification.</p>
+              </div>
+            </article>
+
+            <article class="engineering-project engineering-project-interface engineering-project-shiva">
+              <figure><img src="assets/shiva-exo.jpg" alt="Shiva Exo V2 assistive exoskeleton model and test setup" loading="lazy"></figure>
+              <div>
+                <p class="project-status">Modeling &amp; test bench</p>
+                <h3>Shiva Exo V2</h3>
+                <p>Buckling-spring characterization, Arduino/Simulink test bench, Simscape Multibody model and variable-assistance concept.</p>
+              </div>
+            </article>
+
+            <article class="engineering-project engineering-project-wide">
+              <figure><img src="assets/cinclus.jpg" alt="Cinclus-23 aerial-underwater vehicle and project team" loading="lazy"></figure>
+              <div>
+                <p class="project-status">Mechatronic lead · built and tested · 2021–2022</p>
+                <h3>Cinclus-23</h3>
+                <p>I led the mechatronic design of a carbon/epoxy fixed-wing vehicle integrating Pixhawk, Raspberry Pi and MAVLink. The prototype was tested in flight, underwater and through air–water transitions.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="publications" class="section publications-section">
+        <div class="shell">
+          <div class="section-heading compact-heading">
+            <p class="section-label">Publications</p>
+            <div>
+              <h2>Selected research outputs</h2>
+              <p>Publications before 2026 are indexed under Mirado Rajaomarosata.</p>
+            </div>
+          </div>
+
+          <div class="publication-list">
+            <article>
+              <p class="publication-meta">2026 · Preprint</p>
+              <div><h3>Natural Locomotion: Principle and Method</h3><p>Mirado Mortel, Luc Jaulin, Lionel Lapierre, Simon Rohou</p></div>
+              <a href="https://arxiv.org/abs/2605.28254" target="_blank" rel="noreferrer">arXiv ↗</a>
+            </article>
+            <article>
+              <p class="publication-meta">2025 · Mechatronics 110</p>
+              <div><h3>Natural efficient gaits from Nonholonomic Locomotion Nonlinear Normal Mode (NL-NNM): The Pendrivencar case</h3><p>Mirado Rajaomarosata, Luc Jaulin, Lionel Lapierre, Simon Rohou · 103366</p></div>
+              <a href="https://doi.org/10.1016/j.mechatronics.2025.103366" target="_blank" rel="noreferrer">DOI ↗</a>
+            </article>
+            <article>
+              <p class="publication-meta">2025 · IEEE OCEANS</p>
+              <div><h3>Energy-Efficient Nonholonomic Fish Robot: Nonlinear Forced Oscillations</h3><p>Mirado Rajaomarosata, Luc Jaulin, Lionel Lapierre, Simon Rohou · pp. 1–7</p></div>
+              <a href="https://doi.org/10.1109/OCEANS58557.2025.11104676" target="_blank" rel="noreferrer">DOI ↗</a>
+            </article>
+          </div>
+          <div class="text-links publication-links">
+            <a href="https://scholar.google.com/citations?hl=en&amp;user=OaedG6MAAAAJ" target="_blank" rel="noreferrer">Google Scholar ↗</a>
+            <a href="https://orcid.org/0009-0006-8081-9228" target="_blank" rel="noreferrer">ORCID ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="profile" class="section profile-section">
+        <div class="shell profile-grid">
+          <div>
+            <p class="section-label">Profile</p>
+            <h2>Researcher, engineer and teacher.</h2>
+            <p class="large-copy">
+              I am completing a PhD in robotics at ENSTA / Institut Polytechnique de Paris,
+              within Lab-STICC, advised by Luc Jaulin, Lionel Lapierre and Simon Rohou.
+            </p>
+            <p>
+              My background combines mechatronics, robotics and dynamical systems. I trained at
+              ENS Rennes, ranked first in the Robotics MSc at ENSTA, hold the French agrégation
+              teaching qualification, and teach computer vision, 3D vision and C++.
+            </p>
+          </div>
+          <dl class="profile-facts">
+            <div><dt>Research</dt><dd>Nonlinear dynamics · nonholonomic systems · locomotion · intrinsic navigation · bio-inspired sensing</dd></div>
+            <div><dt>Methods</dt><dd>Physical modeling · continuation · reduced-order models · estimation · mechanics-aware control</dd></div>
+            <div><dt>Implementation</dt><dd>Python · C++ · ROS · MATLAB/Simulink · Simscape · computer vision · SLAM</dd></div>
+            <div><dt>Recognition</dt><dd>JJCR Best Poster, 3rd prize · 2025<br>Distributed Intelligence Challenge, 3rd prize · 2023</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="shell contact-inner">
+          <div>
+            <p class="section-label">Contact</p>
+            <h2>Available from September 2026; an October start is also possible.</h2>
+            <p>I am looking for a postdoctoral or robotics R&amp;D position where physical modeling, computation and control remain connected.</p>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:mirado.rajaomarosata@ensta.fr">mirado.rajaomarosata@ensta.fr</a>
+            <a href="https://www.linkedin.com/in/mirado-rajaomarosata-5193a1213/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/rajaommi" target="_blank" rel="noreferrer">GitHub ↗</a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 Mirado Mortel. Built as a static GitHub Pages site.</p>
+      <div class="shell footer-inner">
+        <p>© 2026 Mirado Mortel</p>
+        <p>Mechanics · Locomotion · Navigation · Sensing</p>
+      </div>
     </footer>
   </body>
 </html>
