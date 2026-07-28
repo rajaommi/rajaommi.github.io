@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export a compact, browser-ready view of the audited V3 2SEG family."""
+"""Export a browser-ready view of the audited 2SEG family promoted in V4."""
 
 from __future__ import annotations
 
@@ -97,7 +97,7 @@ def main() -> None:
         "meanSpeedWindow": [-200, 200],
         "backbone": backbone,
         "representatives": representatives_payload,
-        "scope": "Descriptive diagnostics of archived corrected cycles; not a stability or global-manifold certificate.",
+        "scope": "Descriptive diagnostics of archived corrected cycles; not a branch-wide rank, stability, or global-manifold certificate.",
     }
     args.output.write_text(
         "window.THESIS_FAMILY_DATA = "

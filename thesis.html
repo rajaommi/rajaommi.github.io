@@ -6,9 +6,9 @@
     <meta name="theme-color" content="#f8f6f1">
     <meta
       name="description"
-      content="Natural Locomotion Families: Mirado Mortel's PhD research on exact reduced return, reconstructed transport, mechanical exchange and resonantly maintained motion."
+      content="Natural Locomotion Families: Principle, Method, and Control — Mirado Mortel's PhD research on reduced return, local NLM and RLM geometry, mechanical exchange, resonant maintenance and local regulation."
     >
-    <title>Natural Locomotion Families — Mirado Mortel's PhD Research</title>
+    <title>Natural Locomotion Families: Principle, Method, and Control — Mirado Mortel</title>
     <link rel="stylesheet" href="styles.css">
     <script src="site.js" defer></script>
     <script src="thesis-family-data.js" defer></script>
@@ -50,7 +50,7 @@
         <div class="thesis-hero-copy">
           <p class="eyebrow">PhD research · Robotics · 2023–2026</p>
           <h1>Natural Locomotion Families</h1>
-          <p class="thesis-subtitle">Let the mechanism organize the motion before controlling it.</p>
+          <p class="thesis-subtitle">Principle, Method, and Control</p>
           <p class="thesis-lead">
             Rather than prescribing an arbitrary periodic joint choreography, this thesis asks
             which repeatable motions are admitted by the locomotor's own dynamics. A natural-
@@ -69,7 +69,7 @@
             <a class="text-action" href="#question">Understand the argument</a>
             <a class="text-action" href="index.html">General research profile</a>
           </div>
-          <p class="thesis-version">Current V3 working manuscript · automatically compiled from the thesis source</p>
+          <p class="thesis-version">Current V4 complete working manuscript · 119 A4 pages · automatically compiled from the thesis source</p>
         </div>
 
         <figure class="scientific-figure figure-thesis" aria-labelledby="thesis-figure-title" aria-describedby="thesis-figure-description">
@@ -160,9 +160,10 @@
           </ol>
           <p class="qualification-note">
             Qualified cycles can then be continued into branches and described by modal or
-            harmonic observables. The historical acronym NLM names the research programme;
-            the mathematical results are called <em>families</em> or <em>branches</em> because no
-            global invariant-manifold theorem is claimed.
+            harmonic observables. Where the phase-fixed return residual has full rank and the
+            phase-swept cycles remain embedded, a regular branch supplies a conditional local
+            chart of the <em>Natural Locomotion Manifold</em> (NLM). This local statement does not
+            merge bifurcations, modal sectors, mechanisms or parameter sets into one global manifold.
           </p>
         </div>
       </section>
@@ -235,8 +236,8 @@
 
           <div class="result-ladder">
             <article>
-              <div class="result-meta"><span>2SEG</span><p>Numerical family</p></div>
-              <div><h3>Finite-amplitude relative-periodic locomotion</h3><p>A spectral seed is corrected and continued into a 379-cycle moving family whose period and choreography vary. A matched-straight SE(2) audit then separates total transport from modulation relative to straight drift.</p></div>
+              <div class="result-meta"><span>2SEG</span><p>Numerical family and local geometry</p></div>
+              <div><h3>Finite-amplitude relative-periodic locomotion</h3><p>A spectral seed is corrected and continued into a 379-cycle moving family whose period and choreography vary. On regular embedded portions, restoring phase gives conditional local NLM charts. A matched-straight SE(2) audit separates total transport from modulation relative to straight drift.</p></div>
             </article>
             <article>
               <div class="result-meta"><span>Theorem</span><p>Exact, conditional</p></div>
@@ -244,34 +245,38 @@
             </article>
             <article>
               <div class="result-meta"><span>3SEG</span><p>Population construction</p></div>
-              <div><h3>Coexisting returned in-phase and anti-phase sectors</h3><p>At one fixed parameter vector, 2,278 AP and 1,358 IP opened cycle files pass the audited return, transport and modal-classification rows. Full vector return qualifies each cycle; modal metrics classify it afterwards.</p></div>
+              <div><h3>Coexisting in-phase- and anti-phase-descended families</h3><p>At one fixed parameter vector, 2,278 anti-phase-descended and 1,358 in-phase-descended opened cycle files pass the audited return, transport and modal-classification rows. Full vector return qualifies each cycle; modal ancestry classifies it afterwards without implying exact 0 or π locking at finite amplitude.</p></div>
             </article>
             <article>
-              <div class="result-meta"><span>Gate B</span><p>Local numerical bridge</p></div>
+              <div class="result-meta"><span>Bridge</span><p>Local numerical continuation</p></div>
               <div><h3>One conservative cycle continued into maintained motion</h3><p>Keeping geometry, inertia, constraint and elasticity fixed, one 2SEG cycle is followed through 19 damping-and-forcing homotopy points. This is one synchronized fixed-speed branch, not persistence or stability of the whole family.</p></div>
             </article>
             <article>
-              <div class="result-meta"><span>RLM + PLL</span><p>Separate forced model</p></div>
-              <div><h3>A response map and local phase–speed navigation</h3><p>A parameter-distinct archive contains 13,782 period-matched responses with folds and changing waveforms. Work–loss balance is exact; quadrature is a local marker only on the lower-amplitude segment. A fast phase loop and slower mean-speed update traverse that chart locally from two named starts.</p></div>
+              <div class="result-meta"><span>RLM</span><p>Separate forced-response family</p></div>
+              <div><h3>Maintained responses and conditional local sheets</h3><p>A parameter-distinct archive contains 13,782 recorded synchronized, transporting responses with folds and changing waveforms. Regular transported components of the stroboscopic return set provide conditional local RLM charts. Work–loss balance is exact on periodic responses; quadrature is a local marker only on the lower-amplitude segment.</p></div>
+            </article>
+            <article>
+              <div class="result-meta"><span>Control</span><p>Nominal local evidence</p></div>
+              <div><h3>Guarded phase–speed regulation</h3><p>A fast phase loop and slower mean-speed update traverse the tested rising segment from rest and from its weak stored response. Both runs accept 21 stages and finish near mean speed 12.068; all 14 sampled finite-harmonic closed matrices have negative spectral abscissa. This supports the local design, not stability of the exact nonlinear plant.</p></div>
             </article>
           </div>
 
           <figure class="scientific-figure figure-evidence" aria-labelledby="evidence-figure-title" aria-describedby="evidence-figure-description">
             <canvas data-research-figure="evidence" aria-hidden="true">
-              Evidence topology separating conservative families, the scalar theorem, one local same-model bridge, a parameter-distinct forced-response map and local navigation, with missing stability and hardware links.
+              Evidence topology separating conservative families and conditional local NLM charts, the scalar theorem, one same-model bridge, parameter-distinct response sheets with conditional local RLM charts, and guarded regulation, with exact nonlinear stability and hardware links still open.
             </canvas>
             <figcaption>
               <strong id="evidence-figure-title">Established links are solid; research-programme links are dashed.</strong>
-              <span id="evidence-figure-description">The same-mechanics bridge connects one conservative cycle to one maintained branch. It does not identify that branch with the parameter-distinct RLM archive. Whole-family persistence, orbital stability, recovery and identified-hardware validation remain open.</span>
+              <span id="evidence-figure-description">Regular conservative and forced branches admit conditional local NLM and RLM charts. The same-mechanics bridge connects one conservative cycle to one maintained branch but does not identify it with the parameter-distinct response archive. Global regularity, exact nonlinear stability, recovery and identified-hardware validation remain open.</span>
             </figcaption>
           </figure>
 
           <details class="scope-details">
             <summary>Scientific scope and current limits</summary>
             <div>
-              <p>The mechanical results concern smooth ideal nonholonomic models with fixed nondimensional parameters. Conservative orbital stability, basins, robustness and hardware identity are not established.</p>
-              <p>The 3SEG population audit covers the stated return, modal, exchange and pose rows, not a complete genealogy or exhaustive atlas. The same-model bridge contains one anchored branch. The forced-response and controller archives belong to a different parameter set and have no experimental validation.</p>
-              <p>All 42 archived controller stages were accepted, so rejection, rollback and recovery remain untested. The demonstrated claim is local navigation of a forced-response chart, not stabilization of conservative natural-locomotion families.</p>
+              <p>The mechanical results concern smooth, bilateral, ideal, continuously active constant-rank velocity constraints at fixed nondimensional parameters. Conservative orbital stability, basins, robustness and hardware identity are not established.</p>
+              <p>The 3SEG population audit covers the stated return, modal, exchange and pose rows, not a complete genealogy or exhaustive atlas. The same-model bridge contains one anchored branch. In the 13,782-response archive, recorded endpoints, forcing clocks and transport are audited, but the original collocation residuals and branch-wide Jacobians are not independently recoverable. The forced-response and controller studies use a different parameter set and have no experimental validation.</p>
+              <p>All 42 nominal controller stages were accepted, so rejection, rollback and recovery remain untested. Fourteen sampled reduced-order matrices support the local design but do not establish stability of the exact nonlinear system. The controller regulates a forced-response sheet; it does not stabilize the conservative NLM.</p>
             </div>
           </details>
         </div>
@@ -283,22 +288,23 @@
             <p class="section-label">Manuscript</p>
             <h2>Read the current working manuscript.</h2>
             <p>
-              The concise V3 is designed as a self-contained three-day reading path: the
-              necessary foundations are introduced where they become useful, and every main
+              The 119-page V4 is designed as a self-contained route for a scientific roboticist:
+              the necessary foundations are introduced where they become useful, the common
+              constrained-mechanics construction is derived explicitly, and every main
               contribution is paired with its evidence boundary.
             </p>
             <a
               class="button button-primary"
               href="https://rajaommi.github.io/assets/mirado-mortel-thesis-latest.pdf"
             >Download the latest manuscript</a>
-            <p class="small-note">Stable URL · refreshed automatically after each successful build of the V3 source branch · not yet the final institutional deposit.</p>
+            <p class="small-note">Stable URL · refreshed automatically after each successful build of the V4 source branch · complete working manuscript, not yet the final institutional deposit.</p>
           </div>
 
           <div class="contents-list">
             <article><span>01</span><div><h3>Question and foundations</h3><p>Action and phase, nonlinear modes, relative periodicity, reconstruction, return maps and losses.</p></div></article>
             <article><span>02</span><div><h3>Conservative families and return</h3><p>The 2SEG family, scalar exchange theorem, 3SEG vector boundary and matched-pose audits.</p></div></article>
-            <article><span>03</span><div><h3>Maintained response and navigation</h3><p>The same-mechanics local bridge, parameter-distinct Resonant Locomotion Map and local phase–speed controller.</p></div></article>
-            <article><span>04</span><div><h3>Synthesis, limits and protocols</h3><p>A direct answer, evidence topology, research programme and technical appendices for reproduction.</p></div></article>
+            <article><span>03</span><div><h3>Maintained response and regulation</h3><p>The same-mechanics local bridge, parameter-distinct response sheets, conditional local RLM geometry and guarded phase–speed control.</p></div></article>
+            <article><span>04</span><div><h3>Synthesis, limits and verification</h3><p>A direct answer, evidence topology, local-manifold conditions and seven technical appendices for reproduction.</p></div></article>
           </div>
         </div>
       </section>

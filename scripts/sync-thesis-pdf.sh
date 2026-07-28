@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-source_pdf="${THESIS_PDF_SOURCE:-/home/mirado/research/thesis_nlm_v2/thesis_v3/build/thesis_v3.pdf}"
+source_pdf="${THESIS_PDF_SOURCE:-/home/mirado/research/thesis_nlm_v2/thesis_v4/build/thesis_v4.pdf}"
 site_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 target_pdf="${site_root}/assets/mirado-mortel-thesis-latest.pdf"
 

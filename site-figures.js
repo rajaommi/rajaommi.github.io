@@ -889,8 +889,9 @@
     const future = { stroke: palette.muted, fill: rgba(palette.muted, 0.035), dash: [6, 5] };
     const node = (x, y, w, h, title, subtitle, kind = established) => {
       box(ctx, x, y, w, h, kind);
-      wrappedText(ctx, title, x + w / 2, y + 15, w - 22, { size: 12, weight: 720, color: kind === future ? palette.muted : palette.ink });
-      wrappedText(ctx, subtitle, x + w / 2, y + h - 32, w - 18, { size: 10.5, weight: 520, color: palette.muted });
+      const titleHeight = wrappedText(ctx, title, x + w / 2, y + 15, w - 22, { size: 12, weight: 720, color: kind === future ? palette.muted : palette.ink });
+      const subtitleY = Math.max(y + h - 32, y + 20 + titleHeight);
+      wrappedText(ctx, subtitle, x + w / 2, subtitleY, w - 18, { size: 10.5, weight: 520, color: palette.muted });
     };
 
     if (mobile) {
@@ -898,12 +899,12 @@
       const h = 67;
       const gap = 23;
       const entries = [
-        ["Conservative families", "numerical construction", established],
+        ["Conservative families", "conditional local NLM charts", established],
         ["Scalar theorem / vector boundary", "exact scope by return dimension", established],
         ["One same-model bridge", "local numerical branch", established],
-        ["Parameter-distinct RLM", "separate audited response map", established],
-        ["Local phase–speed navigation", "nominal demonstration", established],
-        ["Stability · recovery · hardware", "open research-programme links", future]
+        ["Forced-response sheets", "conditional local RLM charts", established],
+        ["Guarded phase–speed regulation", "42 stages + 14 sampled matrices", established],
+        ["Exact stability · recovery · hardware", "open research-programme links", future]
       ];
       entries.forEach(([title, subtitle, kind], index) => {
         const y = pad + index * (h + gap);
@@ -925,13 +926,13 @@
     const x1 = pad;
     const x2 = pad + nodeW + gapX;
     const x3 = x2 + nodeW + gapX;
-    node(x1, topY, nodeW, nodeH, "Conservative families", "numerical construction");
+    node(x1, topY, nodeW, nodeH, "Conservative families", "conditional local NLM charts");
     node(x2, topY, nodeW, nodeH, "Scalar theorem / vector boundary", "return dimension sets the scope");
     node(x3, topY, nodeW, nodeH, "One same-model bridge", "local numerical branch");
-    node(x1, secondY, nodeW, nodeH, "Whole-family persistence", "orbital stability remains open", future);
-    node(x2, secondY, nodeW, nodeH, "Parameter-distinct RLM", "separate audited response map");
-    node(x3, secondY, nodeW, nodeH, "Local phase–speed navigation", "nominal demonstration");
-    node(x3, thirdY, nodeW, nodeH, "Robustness · recovery · hardware", "open validation programme", future);
+    node(x1, secondY, nodeW, nodeH, "Global NLM regularity", "whole-family stability remains open", future);
+    node(x2, secondY, nodeW, nodeH, "Forced-response sheets", "conditional local RLM charts");
+    node(x3, secondY, nodeW, nodeH, "Guarded phase–speed regulation", "42 stages + 14 sampled matrices");
+    node(x3, thirdY, nodeW, nodeH, "Exact nonlinear stability · recovery · hardware", "open validation programme", future);
 
     arrow(ctx, x1 + nodeW + 5, topY + nodeH / 2, x2 - 5, topY + nodeH / 2, { color: palette.accent, width: 1.5 });
     arrow(ctx, x2 + nodeW + 5, topY + nodeH / 2, x3 - 5, topY + nodeH / 2, { color: palette.accent, width: 1.5 });
