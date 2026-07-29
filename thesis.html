@@ -69,7 +69,7 @@
             <a class="text-action" href="#question">Understand the argument</a>
             <a class="text-action" href="index.html">General research profile</a>
           </div>
-          <p class="thesis-version">Current V4 complete working manuscript · automatically compiled from the thesis source</p>
+          <p class="thesis-version">Reviewed V4 scientific release · automatically compiled from the frozen scientific source</p>
         </div>
 
         <figure class="scientific-figure figure-thesis" aria-labelledby="thesis-figure-title" aria-describedby="thesis-figure-description">
@@ -83,7 +83,7 @@
         </figure>
 
         <dl class="thesis-facts">
-          <div><dt>Status</dt><dd>Complete working manuscript</dd></div>
+          <div><dt>Status</dt><dd>Scientific content frozen · institutional deposit pending</dd></div>
           <div><dt>Affiliation</dt><dd>ENSTA · Institut Polytechnique de Paris</dd></div>
           <div><dt>PhD supervisor</dt><dd>Luc Jaulin</dd></div>
           <div><dt>Co-supervisors</dt><dd>Lionel Lapierre · Simon Rohou</dd></div>
@@ -175,8 +175,8 @@
             <div>
               <h2>A family is not one sinusoid at different amplitudes.</h2>
               <p>
-                The corrected two-segment archive contains 379 displayed cycles. Their clock,
-                carrier participation, phase relation and harmonic content change with mean speed.
+                The continued two-segment family is represented by 379 exported records. Their
+                clock, carrier participation, phase relation and harmonic content change with mean speed.
               </p>
             </div>
           </div>
@@ -187,13 +187,13 @@
             </canvas>
             <figcaption>
               <strong id="family-figure-title">The clock and choreography deform along the branch.</strong>
-              <span id="family-figure-description">Data from the archived 379-cycle 2SEG family. The representative yaw-rate harmonic distortion rises from 4.30% to 17.30%, while the unwrapped joint–heading phase relation shifts by about 85°. These are descriptive diagnostics, not a stability or global-manifold certificate.</span>
+              <span id="family-figure-description">Data from 379 archived 2SEG continuation records. The representative yaw-rate harmonic distortion rises from 4.30% to 17.30%, while the unwrapped joint–heading phase relation shifts by about 85°. These are descriptive diagnostics, not a branch-wide rank, stability or global-manifold certificate.</span>
             </figcaption>
           </figure>
 
           <div class="insight-grid">
             <article><h3>What control should accompany</h3><p>A controller aligned with the mechanics must allow frequency and coordination to change along the branch instead of imposing one fixed harmonic choreography.</p></article>
-            <article><h3>What transport does — and does not — show</h3><p>A matched comparison on SE(2) shows that, away from near-zero drift, straight motion usually dominates the archived translation. The oscillation modulates that moving baseline; the comparison is not a causal energy decomposition.</p></article>
+            <article><h3>What transport does — and does not — show</h3><p>A matched comparison on SE(2) shows that, away from the near-zero-speed band, straight motion usually dominates the archived translation. The oscillation modulates that moving baseline; the comparison is not a causal energy decomposition.</p></article>
           </div>
         </div>
       </section>
@@ -205,9 +205,10 @@
             <div>
               <h2>Exchange certifies return only when the missing information is scalar.</h2>
               <p>
-                The carrier-closed / carrier-open construction is a field decomposition after
-                carrier elimination, not a physical clamp. It exposes a transverse storage and
-                the exchange induced when the original coupled field is restored.
+                Carrier elimination first defines an auxiliary carrier-closed field. A closed-to-open
+                lift and full-field correction then restore the propulsive channel; this is not a
+                physical clamp. The construction exposes a transverse storage and the exchange
+                induced when the original coupled field is restored.
               </p>
             </div>
           </div>
@@ -237,27 +238,27 @@
           <div class="result-ladder">
             <article>
               <div class="result-meta"><span>2SEG</span><p>Numerical family and local geometry</p></div>
-              <div><h3>Finite-amplitude relative-periodic locomotion</h3><p>A spectral seed is corrected and continued into a 379-cycle moving family whose period and choreography vary. On regular embedded portions, restoring phase gives conditional local NLM charts. A matched-straight SE(2) audit separates total transport from modulation relative to straight drift.</p></div>
+              <div><h3>Finite-amplitude relative-periodic locomotion</h3><p>A spectral seed is corrected and continued into a family represented by 379 exported records whose period and choreography vary; every archived record has a nonidentity reconstructed pose. Independent exact-field return and local-rank checks on 29 matched nonzero-speed roots support conditional local NLM charts there. This is sampled local regularity, not branch-wide regularity or stability. A matched-straight SE(2) audit separates total transport from modulation relative to straight motion.</p></div>
             </article>
             <article>
               <div class="result-meta"><span>Theorem</span><p>Exact, conditional</p></div>
-              <div><h3>Scalar exchange–return equivalence</h3><p>On an oriented finite-speed scalar section with injective storage, and once the other return rows close, zero integrated exchange is equivalent to return of the remaining crossing speed. The theorem is realized on 29 accepted cycles.</p></div>
+              <div><h3>Scalar exchange–return equivalence</h3><p>On an oriented finite-speed scalar section with injective storage, and once the other return rows close, zero integrated exchange is equivalent to return of the remaining crossing speed. All 29 audited roots are recovered by independent reintegration; the largest scaled residual is 5.51 × 10<sup>−12</sup>, and every fixed-speed return-plus-exchange Jacobian has full column rank. This is sampled local evidence, not global regularity.</p></div>
             </article>
             <article>
               <div class="result-meta"><span>3SEG</span><p>Population construction</p></div>
-              <div><h3>Coexisting in-phase- and anti-phase-descended families</h3><p>At one fixed parameter vector, 2,278 anti-phase-descended and 1,358 in-phase-descended opened cycle files pass the audited return, transport and modal-classification rows. Full vector return qualifies each cycle; modal ancestry classifies it afterwards without implying exact 0 or π locking at finite amplitude.</p></div>
+              <div><h3>Coexisting in-phase- and anti-phase-descended families</h3><p>At one fixed parameter vector, 2,278 anti-phase-descended and 1,358 in-phase-descended full-field cycles pass the return, transport and modal-classification rows. An independent exact-field audit checks all 3,636 cycles over 3,433,152 stored intervals, with a maximum scaled local-flow defect of 1.07 × 10<sup>−6</sup>. Full vector return qualifies each cycle; modal ancestry classifies it afterwards without implying exact 0 or π locking at finite amplitude.</p></div>
             </article>
             <article>
               <div class="result-meta"><span>Bridge</span><p>Local numerical continuation</p></div>
-              <div><h3>One conservative cycle continued into maintained motion</h3><p>Keeping geometry, inertia, constraint and elasticity fixed, one 2SEG cycle is followed through 19 damping-and-forcing homotopy points. This is one synchronized fixed-speed branch, not persistence or stability of the whole family.</p></div>
+              <div><h3>One conservative cycle continued into maintained motion</h3><p>Keeping geometry, inertia, constraint and elasticity fixed, one 2SEG cycle is followed through 19 damping-and-forcing homotopy points. All 19 points pass the release rerun, with a largest strict return residual of 7.10 × 10<sup>−10</sup>. This is one synchronized fixed-speed branch, not persistence or stability of the whole family, nor identification with the separate forced-response archive.</p></div>
             </article>
             <article>
               <div class="result-meta"><span>RLM</span><p>Separate forced-response family</p></div>
-              <div><h3>Maintained responses and conditional local sheets</h3><p>A parameter-distinct archive contains 13,782 recorded synchronized, transporting responses with folds and changing waveforms. Regular transported components of the stroboscopic return set provide conditional local RLM charts. Work–loss balance is exact on periodic responses; quadrature is a local marker only on the lower-amplitude segment.</p></div>
+              <div><h3>Maintained responses and conditional local sheets</h3><p>A parameter-distinct archive contains 13,782 recorded synchronized, transporting responses with folds and changing waveforms. An independent exact-field audit covers all 2,756,400 stored intervals: the largest scaled local defect is 1.72 × 10<sup>−5</sup> and the largest input–loss imbalance is 7.58 × 10<sup>−6</sup>. Regular transported components provide conditional local RLM charts; quadrature remains a local marker only on the lower-amplitude segment.</p></div>
             </article>
             <article>
               <div class="result-meta"><span>Control</span><p>Nominal local evidence</p></div>
-              <div><h3>Guarded phase–speed regulation</h3><p>A fast phase loop and slower mean-speed update traverse the tested rising segment from rest and from its weak stored response. Both runs accept 21 stages and finish near mean speed 12.068; all 14 sampled finite-harmonic closed matrices have negative spectral abscissa. This supports the local design, not stability of the exact nonlinear plant.</p></div>
+              <div><h3>Guarded phase–speed regulation</h3><p>A fast phase loop and slower mean-speed update regulate phase and mean-speed observables across the tested rising interval from rest and from a weak stored response. Both runs accept 21 stages and finish near mean speed 12.068; a full-cycle neighborhood comparison and a time-step-halving audit corroborate one terminal run. All 14 sampled finite-harmonic closed matrices have negative spectral abscissa, but cover only the lower amplitude interval, not the terminal endpoints. The result is not exact nonlinear stability or online RLM-membership tracking.</p></div>
             </article>
           </div>
 
@@ -267,7 +268,7 @@
             </canvas>
             <figcaption>
               <strong id="evidence-figure-title">Established links are solid; research-programme links are dashed.</strong>
-              <span id="evidence-figure-description">Regular conservative and forced branches admit conditional local NLM and RLM charts. The same-mechanics bridge connects one conservative cycle to one maintained branch but does not identify it with the parameter-distinct response archive. Global regularity, exact nonlinear stability, recovery and identified-hardware validation remain open.</span>
+              <span id="evidence-figure-description">Regular conservative and forced branches admit conditional local NLM and RLM charts. The same-mechanics bridge connects one conservative cycle to one maintained branch but does not identify it with the parameter-distinct response archive. Global regularity, exact nonlinear stability, general recovery and identified-hardware validation remain open.</span>
             </figcaption>
           </figure>
 
@@ -275,8 +276,8 @@
             <summary>Scientific scope and current limits</summary>
             <div>
               <p>The mechanical results concern smooth, bilateral, ideal, continuously active constant-rank velocity constraints at fixed nondimensional parameters. Conservative orbital stability, basins, robustness and hardware identity are not established.</p>
-              <p>The 3SEG population audit covers the stated return, modal, exchange and pose rows, not a complete genealogy or exhaustive atlas. The same-model bridge contains one anchored branch. In the 13,782-response archive, recorded endpoints, forcing clocks and transport are audited, but the original collocation residuals and branch-wide Jacobians are not independently recoverable. The forced-response and controller studies use a different parameter set and have no experimental validation.</p>
-              <p>All 42 nominal controller stages were accepted, so rejection, rollback and recovery remain untested. Fourteen sampled reduced-order matrices support the local design but do not establish stability of the exact nonlinear system. The controller regulates a forced-response sheet; it does not stabilize the conservative NLM.</p>
+              <p>The exact-field 3SEG audit covers all 3,636 archived cycles, but not minimal period, branch-wide rank, a complete genealogy or an exhaustive atlas. The same-model bridge contains one anchored branch. The forced exact-field audit covers all 13,782 recorded responses at the reported numerical resolution, but complete collocation Jacobians remain unavailable, so branch-wide RLM regularity is not certified. The forced-response and controller studies use a different parameter set and have no experimental validation.</p>
+              <p>All 42 nominal controller stages were accepted. A separate constructed stress harness demonstrates one rejected proposal, explicit reuse of the last accepted state and acceptance of a reduced proposal; it does not execute the production stage manager's rejection branch or establish general recovery. The 14 sampled reduced-order matrices stop at forcing amplitude 0.031487, below the terminal endpoints near 0.03641, and do not establish stability of the exact nonlinear system. The controller regulates phase–speed observables on the tested forced-response interval; it does not stabilize the conservative NLM or certify online membership in an RLM chart.</p>
             </div>
           </details>
         </div>
@@ -286,7 +287,7 @@
         <div class="shell manuscript-grid">
           <div class="manuscript-copy">
             <p class="section-label">Manuscript</p>
-            <h2>Read the current working manuscript.</h2>
+            <h2>Read the current scientific release.</h2>
             <p>
               V4 opens with stand-alone French and English scientific summaries, then provides
               a self-contained route for a scientific roboticist. The necessary foundations are
@@ -294,15 +295,20 @@
               is derived explicitly, and every main contribution is paired with its evidence boundary.
             </p>
             <p>
-              Its 53 cited references position the thesis across passive-dynamics locomotion,
+              Its 56 references, all cited, position the thesis across passive-dynamics locomotion,
               nonlinear modes in robotics, geometric and nonholonomic locomotion, continuation,
               resonance, constrained control and the hybrid or nonsmooth boundary of the present models.
+            </p>
+            <p>
+              The release records the reproduction route, numerical environment, hashes and
+              evidence boundary for each central computation. Included calculations can be rerun
+              from the source; access limits for the larger external archives are stated explicitly.
             </p>
             <a
               class="button button-primary"
               href="https://rajaommi.github.io/assets/mirado-mortel-thesis-latest.pdf"
             >Download the latest manuscript</a>
-            <p class="small-note">Stable URL · refreshed automatically after each successful build of the V4 source branch · complete working manuscript, not yet the final institutional deposit.</p>
+            <p class="small-note">Stable URL · refreshed automatically after each successful build of the V4 source branch · scientific release, with final institutional cover and deposit metadata still pending.</p>
           </div>
 
           <div class="contents-list">

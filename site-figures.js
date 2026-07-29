@@ -776,7 +776,7 @@
       : { x: width * 0.48, y: pad + 54, w: width - width * 0.48 - pad, h: height - pad * 2 - 65 };
 
     label(ctx, "A · PERIOD BACKBONE", plotRect.x - 38, pad, palette.mechanics);
-    text(ctx, "379 corrected cycles", plotRect.x - 38, pad + 24, { size: 12, color: palette.muted });
+    text(ctx, "379 exported records", plotRect.x - 38, pad + 24, { size: 12, color: palette.muted });
     const xMin = -200;
     const xMax = 200;
     const yMin = 0.66;
@@ -903,8 +903,8 @@
         ["Scalar theorem / vector boundary", "exact scope by return dimension", established],
         ["One same-model bridge", "local numerical branch", established],
         ["Forced-response sheets", "conditional local RLM charts", established],
-        ["Guarded phase–speed regulation", "42 stages + 14 sampled matrices", established],
-        ["Exact stability · recovery · hardware", "open research-programme links", future]
+        ["Guarded phase–speed regulation", "42 nominal stages + endpoint/stress audits", established],
+        ["Exact stability · general recovery · hardware", "open research-programme links", future]
       ];
       entries.forEach(([title, subtitle, kind], index) => {
         const y = pad + index * (h + gap);
@@ -931,8 +931,8 @@
     node(x3, topY, nodeW, nodeH, "One same-model bridge", "local numerical branch");
     node(x1, secondY, nodeW, nodeH, "Global NLM regularity", "whole-family stability remains open", future);
     node(x2, secondY, nodeW, nodeH, "Forced-response sheets", "conditional local RLM charts");
-    node(x3, secondY, nodeW, nodeH, "Guarded phase–speed regulation", "42 stages + 14 sampled matrices");
-    node(x3, thirdY, nodeW, nodeH, "Exact nonlinear stability · recovery · hardware", "open validation programme", future);
+    node(x3, secondY, nodeW, nodeH, "Guarded phase–speed regulation", "42 nominal stages + endpoint/stress audits");
+    node(x3, thirdY, nodeW, nodeH, "Exact nonlinear stability · general recovery · hardware", "open validation programme", future);
 
     arrow(ctx, x1 + nodeW + 5, topY + nodeH / 2, x2 - 5, topY + nodeH / 2, { color: palette.accent, width: 1.5 });
     arrow(ctx, x2 + nodeW + 5, topY + nodeH / 2, x3 - 5, topY + nodeH / 2, { color: palette.accent, width: 1.5 });
