@@ -14,6 +14,12 @@ When releasing CSS or navigation changes, bump their shared `?v=` query in both 
 
 ## Thesis releases: preserve earlier readers' copies
 
+The latest approved release is V7 (9 September 2026, 116 pages), published
+at the author's request after the complete manuscript and visual/editorial
+reviews. V5 and the July V4 remain available at their original dated URLs;
+V6 was an intermediate local reading version, not a separate public release.
+The V7 source is the frozen `thesis_v7_reading_20260909.pdf`, not a fresh build.
+
 `assets/thesis/versions.json` records the approved versions, dates, page counts, sizes, SHA-256 hashes and release notes. The same release information is rendered statically in `thesis.html` for resilience and accessibility.
 
 1. Add a **new dated PDF**, never overwrite a versioned file. Keep earlier published copies unchanged.

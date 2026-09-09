@@ -1,8 +1,21 @@
 {
   "schema_version": 1,
-  "latest": "v5",
+  "latest": "v7",
   "latest_pdf": "assets/mirado-mortel-thesis-latest.pdf",
   "releases": [
+    {
+      "id": "v7",
+      "label": "Version 7",
+      "date": "2026-09-09",
+      "path": "assets/thesis/mirado-mortel-thesis-v7-2026-09-09.pdf",
+      "pages": 116,
+      "bytes": 5334542,
+      "sha256": "6c19146453949234da22ff82e10a6e058dbc4a3d01e4fbc4ba1bf9f5717c7294",
+      "changes": [
+        "Chapter-by-chapter review, clearer figures and transitions. 116 pages.",
+        "The latest visual pass recomposed eight figures and added one; earlier public versions remain available."
+      ]
+    },
     {
       "id": "v5",
       "label": "Version 5",
@@ -13,7 +26,7 @@
       "sha256": "ca1ba262afa0ed20d4895cdf0fc2a3e3588eab2b067dfb4cf549237a0cd07955",
       "changes": [
         "Revised manuscript, 108 pages.",
-        "Current public release; supersedes the July 2026 manuscript."
+        "September 2026 public manuscript, preserved for readers who started with this version."
       ]
     },
     {
