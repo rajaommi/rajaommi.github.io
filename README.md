@@ -10,6 +10,8 @@ Static, accessible portfolio published at https://rajaommi.github.io/ via GitHub
 
 Preview with `python3 -m http.server 8765` and open http://localhost:8765/.
 
+When releasing CSS or navigation changes, bump their shared `?v=` query in both HTML pages so returning readers do not receive cached assets from the previous design.
+
 ## Thesis releases: preserve earlier readers' copies
 
 `assets/thesis/versions.json` records the approved versions, dates, page counts, sizes, SHA-256 hashes and release notes. The same release information is rendered statically in `thesis.html` for resilience and accessibility.
