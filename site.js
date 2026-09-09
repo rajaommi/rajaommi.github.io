@@ -1,52 +1,47 @@
-const header = document.querySelector("[data-header]");
-const nav = document.querySelector("[data-nav]");
-const navToggle = document.querySelector("[data-nav-toggle]");
-const pageRegions = [document.querySelector("main"), document.querySelector("footer"), document.querySelector(".brand")].filter(Boolean);
+"use strict";
 
-if (header) {
-  const updateHeader = () => header.classList.toggle("is-scrolled", window.scrollY > 20);
-  updateHeader();
-  window.addEventListener("scroll", updateHeader, { passive: true });
-}
+(() => {
+  const nav = document.querySelector("[data-nav]");
+  const toggle = document.querySelector("[data-nav-toggle]");
+  if (!nav || !toggle) return;
 
-if (nav && navToggle) {
-  const setPageInert = (isInert) => {
-    pageRegions.forEach((region) => {
-      if (isInert) region.setAttribute("inert", "");
-      else region.removeAttribute("inert");
-    });
-  };
-
+  const mobile = window.matchMedia("(max-width: 800px)");
   const closeNav = (restoreFocus = false) => {
     nav.classList.remove("is-open");
-    document.body.classList.remove("nav-open");
-    setPageInert(false);
-    navToggle.setAttribute("aria-expanded", "false");
-    navToggle.setAttribute("aria-label", "Open navigation");
-    if (restoreFocus) navToggle.focus();
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.textContent = "Menu";
+    if (restoreFocus) toggle.focus();
   };
-
   const openNav = () => {
     nav.classList.add("is-open");
-    document.body.classList.add("nav-open");
-    setPageInert(true);
-    navToggle.setAttribute("aria-expanded", "true");
-    navToggle.setAttribute("aria-label", "Close navigation");
-    requestAnimationFrame(() => nav.querySelector("a")?.focus());
+    toggle.setAttribute("aria-expanded", "true");
+    toggle.textContent = "Close";
   };
 
-  navToggle.addEventListener("click", () => {
-    if (nav.classList.contains("is-open")) closeNav(true);
+  toggle.addEventListener("click", () => {
+    if (toggle.getAttribute("aria-expanded") === "true") closeNav();
     else openNav();
   });
 
-  nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => closeNav()));
+  nav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) closeNav();
+  });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && nav.classList.contains("is-open")) closeNav(true);
+    if (event.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
+      closeNav(true);
+    }
   });
 
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 900) closeNav();
+  document.addEventListener("click", (event) => {
+    if (!nav.contains(event.target) && !toggle.contains(event.target)) closeNav();
   });
-}
+
+  document.addEventListener("focusin", (event) => {
+    if (!nav.contains(event.target) && !toggle.contains(event.target)) closeNav();
+  });
+
+  mobile.addEventListener("change", () => closeNav());
+  closeNav();
+  document.documentElement.classList.add("js");
+})();

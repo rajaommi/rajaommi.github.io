@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "latest": "v5",
+  "latest_pdf": "assets/mirado-mortel-thesis-latest.pdf",
+  "releases": [
+    {
+      "id": "v5",
+      "label": "Version 5",
+      "date": "2026-09-09",
+      "path": "assets/thesis/mirado-mortel-thesis-v5-2026-09-09.pdf",
+      "pages": 108,
+      "bytes": 5159024,
+      "sha256": "ca1ba262afa0ed20d4895cdf0fc2a3e3588eab2b067dfb4cf549237a0cd07955",
+      "changes": [
+        "Revised manuscript, 108 pages.",
+        "Current public release; supersedes the July 2026 manuscript."
+      ]
+    },
+    {
+      "id": "v4",
+      "label": "Version 4",
+      "date": "2026-07-29",
+      "path": "assets/thesis/mirado-mortel-thesis-v4-2026-07-29.pdf",
+      "pages": 119,
+      "bytes": 2116612,
+      "sha256": "0f3ecc4e52e49dafb1881184437877b4cbbb4d499e03680a56da022dba56bfe6",
+      "changes": [
+        "July 2026 public manuscript, 119 pages.",
+        "Preserved byte-for-byte from the previously published PDF."
+      ]
+    }
+  ]
+}
